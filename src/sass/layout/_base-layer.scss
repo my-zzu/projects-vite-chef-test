@@ -1,0 +1,15 @@
+.base-layout {
+    /*----------------------body 과 선택적 사용---------------------*/
+    $max-width: 72rem;
+    $padding: 1em;
+    display: grid;
+    grid-template-columns: minmax($padding, 1fr) min($max-width, 100% - ($padding * 2)) minmax($padding, 1fr);
+
+    & > * {
+        grid-column: 2 / 3;
+    }
+
+    & > .fill-width {
+        grid-column: 1 / -1;
+    }
+}

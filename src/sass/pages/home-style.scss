@@ -1,0 +1,14 @@
+@charset "UTF-8";
+@use "sass:color";
+@use "sass:meta";
+@use "sass:math";
+@use "sass:map";
+@use "../base" as *;
+@use "../layout" as *;
+@use "../components" as *;
+@use "../utilities" as *;
+@use "../vendor" as *;
+
+body {
+    background: $color-home-bg;
+}

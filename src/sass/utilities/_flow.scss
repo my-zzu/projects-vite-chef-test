@@ -1,0 +1,18 @@
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-spacer, 1em);
+}
+
+.flow[data-spacing="small"] {
+    --flow-spacer: 0.25rem;
+}
+
+.flow-columns > * + * {
+    --flow-space: 0.5em;
+    /*-------------------두요소 사이의 간격--------------------------*/
+    margin-inline-start: var(--flow-space, 3.5em);
+}
+.flow-row > * + * {
+    --flow-space: 0.5em;
+    /*-------------------두요소 사이의 간격--------------------------*/
+    margin-block-start: var(--flow-space, 3.5em);
+}

@@ -1,0 +1,25 @@
+@use "../base/variable" as *;
+
+$ff-sans-serif: "Lato", Arial, Helvetica, sans-serif, "맑은 고딕";
+$ff-serif: "Abril Fatface", serif;
+
+$ff-base: $ff-sans-serif;
+$ff-accent: $ff-serif;
+
+$font-sizes: (
+    80: $fs-80,
+    60: $fs-60,
+    48: $fs-48,
+    36: $fs-36,
+    32: $fs-32,
+    24: $fs-24,
+    21: $fs-21,
+    18: $fs-18,
+    16: $fs-16,
+);
+
+$font-weights: (
+    normal: $fw-normal,
+    bold: $fw-bold,
+    block: $fw-block,
+);

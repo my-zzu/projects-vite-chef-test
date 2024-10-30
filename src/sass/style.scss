@@ -1,0 +1,67 @@
+@charset "UTF-8";
+@use "sass:color";
+@use "sass:meta";
+@use "sass:math";
+@use "sass:map";
+
+@use "abstracts" as *;
+@use "base" as *;
+@use "components" as *;
+@use "layout" as *;
+@use "utilities" as *;
+@use "vendor" as *;
+
+body {
+    background: $color-index-bg;
+    text-align: center;
+    //@extend .clr-primary-normal;
+    color: clr(neutral, 21);
+    // font-size: 1.68em;
+}
+
+.container__bg1 {
+    background: url(../images/hero-bg.webp) no-repeat center;
+    background-size: cover;
+}
+
+.content {
+    &__md {
+        max-width: 70em;
+        margin: 0 auto;
+    }
+    &__md2,
+    &__md3 {
+        padding-block: 7em;
+    }
+}
+.content__md1 {
+    color: clr(neutral, ff);
+}
+.top-bar {
+    &__logo-svg {
+        padding: size(26);
+    }
+    &__navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: gap(48);
+
+        @extend .fs-32;
+        @extend .margin-block-end-160;
+        a {
+            font-family: $ff-accent;
+        }
+    }
+}
+.main-title {
+    @extend .margin-block-end-320;
+    h1 {
+        @extend .margin-block-end-48;
+    }
+    p {
+        * + * {
+            margin-inline-start: 1em;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@use "sass:map";
+
+$gaps: (
+    24: 1.5em,
+    //24px
+    36: 2.25em,
+    //36px
+    48: 3em,
+    //48px
+    72: 4.5em,
+    //72px
+    85: 5.35em,
+    //85px
+    160: 10em,
+    //160px
+);
+
+@function gap($gap-name) {
+    @if map.has-key($gaps, $gap-name) {
+        @return map.get($gaps, $gap-name);
+    } @else {
+        @error '$gaps does not have that gap!';
+    }
+}
+
+.columns__three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    //gap: gap($gap-name);
+    // margin: 3rem;
+}
+.columns__two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: gap(24);
+    // margin: 3rem;
+}
